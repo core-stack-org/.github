@@ -16,3 +16,85 @@ If you have run out of energy or time for your project, put a note at the top of
 
 ![alt text](https://core-stack.org/corestack.jpeg)
 
+```mermaid
+graph TB
+    %% Data Sources
+    NASA[🛰️ NASA Data Sources<br/>MODIS, Landsat, VIIRS<br/>REST API, JSON, GeoTIFF]
+    
+    %% Core Processing
+    GEE[⚙️ Google Earth Engine<br/>Petabyte-scale Computation<br/>JavaScript, Python APIs<br/>Cloud-native Processing]
+    
+    %% Quality Assurance
+    QA[✓ Quality Assurance Layer<br/>ML Validation Models<br/>Statistical Analysis<br/>Human Moderation Queue]
+    
+    %% Data Storage & Services
+    PostGIS[(🗄️ PostGIS Database<br/>Spatial Data Store<br/>Temporal Indexing<br/>ACID Compliance)]
+    
+    GeoServer[🌍 GeoServer<br/>OGC Standards: WMS/WFS/WCS<br/>REST API Gateway<br/>Spatial Data Federation]
+    
+    %% Applications
+    WebApp[💻 Web Application<br/>React + TypeScript<br/>WebGL Rendering<br/>Real-time Collaboration]
+    
+    MobileApp[📱 Mobile App<br/>React Native<br/>Android: Dart<br/>Offline-first Architecture]
+    
+    %% Community & Planning
+    Community[👥 Community Platform<br/>Participatory Mapping<br/>Consensus Protocols<br/>Stakeholder Management]
+    
+    DPR[🤖 Automated DPR Generator<br/>ML-driven Impact Assessment<br/>Resource Optimization<br/>Regulatory Compliance]
+
+    %% Data Flow Connections
+    NASA -->|Scheduled ETL<br/>Batch Processing| GEE
+    GEE -->|Processed Datasets<br/>Quality Metrics| QA
+    QA -->|Validated Data<br/>Metadata Enrichment| PostGIS
+    PostGIS <-->|Spatial Queries<br/>Transaction Log| GeoServer
+    
+    %% Application Connections
+    GeoServer -->|REST API<br/>JSON/GeoJSON| WebApp
+    GeoServer -->|Mobile API<br/>Compressed Tiles| MobileApp
+    
+    %% Bidirectional Data Flow
+    WebApp <-->|User Contributions<br/>Real-time Updates| PostGIS
+    MobileApp -->|Field Data Collection<br/>Crowdsourced Intelligence| PostGIS
+    
+    %% Community Integration
+    WebApp -->|Visualization Layer<br/>Interactive Maps| Community
+    Community -->|Planning Workflows<br/>Decision Records| DPR
+    PostGIS -->|Historical Data<br/>Trend Analysis| DPR
+
+    %% System Objectives (as subgraphs)
+    subgraph "🔍 Ecosystem Intelligence"
+        NASA
+        GEE
+        QA
+    end
+    
+    subgraph "🛠️ Scientific Tooling"
+        PostGIS
+        GeoServer
+        WebApp
+    end
+    
+    subgraph "🤝 Participatory Governance"
+        MobileApp
+        Community
+    end
+    
+    subgraph "🤖 Automated Impact Assessment"
+        DPR
+    end
+
+    %% Styling
+    classDef dataSource fill:#FF6B6B,stroke:#333,stroke-width:2px,color:#fff
+    classDef processing fill:#4ECDC4,stroke:#333,stroke-width:2px,color:#fff
+    classDef storage fill:#45B7D1,stroke:#333,stroke-width:2px,color:#fff
+    classDef application fill:#96C93D,stroke:#333,stroke-width:2px,color:#fff
+    classDef community fill:#FDA085,stroke:#333,stroke-width:2px,color:#fff
+    classDef intelligence fill:#A8EDEA,stroke:#333,stroke-width:2px,color:#333
+
+    class NASA dataSource
+    class GEE,QA processing
+    class PostGIS,GeoServer storage
+    class WebApp,MobileApp application
+    class Community community
+    class DPR intelligence
+```
