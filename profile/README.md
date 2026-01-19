@@ -93,3 +93,5 @@ graph TB
     class Community community
     class DPR intelligence
 ```
+Want to contribute? Head over to our <a href="https://github.com/core-stack-org/core-stack-backend/">backend repository</a> to explore the codebase, review open issues, and submit pull requests.
+
