@@ -9,12 +9,7 @@ CoRE Stack: Commoning for Resilience and Equality is a social-tech enterprise de
 Our esteemed partners on this journey include renowned institutions like IIT Delhi, IIT Palakkad, Gram Vaani, and Magasool. Strengthening our mission and shared goals  with consistent support and collaborative affiliations with GIZ, RainMatter, FES, Common Grounds, and Tarides.
 
 
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
-
-
 ## CoRE Stack Architecture
-
-![alt text](https://core-stack.org/corestack.jpeg)
 
 ```mermaid
 graph TB
